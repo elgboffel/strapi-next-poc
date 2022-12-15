@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_compose_tests",
+  "info": {
+    "displayName": "Test"
+  },
+  "options": {},
+  "attributes": {
+    "prut": {
+      "type": "string"
+    }
+  }
+}

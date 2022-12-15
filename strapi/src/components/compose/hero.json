@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_hero_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "compose.heading"
+    },
+    "test": {
+      "type": "component",
+      "repeatable": true,
+      "component": "compose.test"
+    }
+  }
+}

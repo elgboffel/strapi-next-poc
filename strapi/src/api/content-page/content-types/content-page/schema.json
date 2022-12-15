@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_pages",
+  "info": {
+    "singularName": "content-page",
+    "pluralName": "content-pages",
+    "displayName": "Content Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Dynamic": {
+      "type": "dynamiczone",
+      "components": [
+        "compose.hero",
+        "compose.test"
+      ]
+    }
+  }
+}

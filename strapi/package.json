@@ -1,0 +1,36 @@
+{
+  "name": "strapi-next-poc",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.5.3",
+    "@strapi/plugin-users-permissions": "4.5.3",
+    "@strapi/strapi": "4.5.3",
+    "pg": "8.6.0"
+  },
+  "devDependencies": {
+    "@strapi/plugin-documentation": "4.5.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "11101464-e6c8-4f8c-9ed2-dff5eb60e4b2"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "volta": {
+    "node": "18.12.1",
+    "npm": "8.19.3"
+  }
+}
