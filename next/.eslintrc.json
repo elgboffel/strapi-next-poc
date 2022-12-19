@@ -1,0 +1,78 @@
+{
+  "env": {
+    "browser": true, "node": true, "commonjs": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/strict"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "prettier",
+    "unused-imports"
+  ],
+  "ignorePatterns": ["node_modules/*", ".next/*", ".out/*", "!.prettierrc.js"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts", ".tsx"
+      ]
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts", "*.tsx"
+      ],
+      "plugins": [
+        "@typescript-eslint"
+      ],
+      "extends": [
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        //Used for eslint fix and remove all unused imports
+        "unused-imports/no-unused-imports": "error",
+
+        // We have to turn these off so we can type check generated files
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+
+        // Add rule so eslint will fix this for generated files
+        "linebreak-style": [2, "windows"],
+
+        // We will use TypeScript's types for component props instead
+        "react/prop-types": "off",
+
+        // This rule is not compatible with Next.js's <Link /> components
+        "jsx-a11y/anchor-is-valid": "off",
+        // no need to declare return types on exports - this is not a library
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        // We will create our own image handler
+        "@next/next/no-img-element": "off",
+
+        "@next/next/no-server-import-in-page": "off",
+
+        "no-console": ["error", { "allow": ["error", "warn", "info"] }],
+
+        "prettier/prettier": ["error", {}, { "usePrettierrc": true }] // Includes .prettierrc.js rules
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,71 @@
+{
+	"name": "website",
+	"private": true,
+	"engines": {
+		"node": "18"
+	},
+	"type": "module",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"type-check": "tsc --project tsconfig.json --pretty --noEmit",
+		"lint": "eslint \"src/**/*.{ts,tsx,js,jsx,graphql}\" --fix",
+		"prettier": "prettier --write \"src/**/*.{css,scss,sass,ts,tsx,js,jsx,md,json,graphql}\"",
+		"analyze": "cross-env ANALYZE=true next build",
+		"analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+		"analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
+	},
+	"dependencies": {
+		"@tanstack/react-query": "4.20.4",
+		"@trpc/client": "10.5.0",
+		"@trpc/next": "10.5.0",
+		"@trpc/react-query": "10.5.0",
+		"@trpc/server": "10.5.0",
+		"next": "13.0.7",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"recoil": "0.7.6",
+		"zod": "3.20.2"
+	},
+	"devDependencies": {
+		"@next/bundle-analyzer": "13.0.7",
+		"@svgr/webpack": "6.5.1",
+		"@types/node": "18.11.15",
+		"@types/react": "18.0.26",
+		"@typescript-eslint/eslint-plugin": "5.46.1",
+		"@typescript-eslint/parser": "5.46.1",
+		"eslint": "8.29.0",
+		"eslint-config-next": "13.0.7",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-jsx-a11y": "6.6.1",
+		"eslint-plugin-prettier": "4.2.1",
+		"eslint-plugin-react": "7.31.11",
+		"eslint-plugin-unused-imports": "2.0.0",
+		"husky": "4.3.8",
+		"intercept-stdout": "0.1.2",
+		"lint-staged": "13.1.0",
+		"prettier": "2.8.1",
+		"ts-node": "10.9.1",
+		"tsconfig-paths-webpack-plugin": "4.0.0",
+		"typescript": "4.9.4"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run type-check && lint-staged"
+		}
+	},
+	"lint-staged": {
+		"./src/**/*.{js,jsx,ts,tsx}": [
+			"prettier --write",
+			"eslint --cache --fix"
+		],
+		"./src/**/*.{md,json}": [
+			"prettier --write"
+		]
+	},
+	"volta": {
+		"node": "18.12.1",
+		"npm": "8.19.3"
+	}
+}
