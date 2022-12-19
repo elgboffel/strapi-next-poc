@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2021",
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
@@ -23,14 +23,8 @@
       "@common/*": [
         "./src/common/*"
       ],
-      "@primitives/*":[
-        "./src/components/primitives/*"
-      ],
-      "@ui/*": [
-        "./src/components/ui/*"
-      ],
-      "@modules/*": [
-        "./src/components/modules/*"
+      "@components/*": [
+        "./src/components/*"
       ],
       "@infrastructure/*": [
         "./src/infrastructure/*"
@@ -53,4 +47,3 @@
     "./**/*.tsx"
   ]
 }
-
